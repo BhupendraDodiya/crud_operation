@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <title>data show</title>
+</head>
+<body>
+    <table border="1px solid black" cellpadding="20px" >
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>CONTACT</th>
+                <th>EMAIL</th>
+                <th>PASSWORD</th>
+                <th>DOB</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.Name}}</td>
+                <td>{{i.Contact}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Password}}</td>
+                <td>{{i.DOB}}</td>
+                <td><a href="/update/{{i.id}}">edit</a>&nbsp&nbsp<a href="/delete/{{i.id}}" >delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Signup</title>
+</head>
+<body style="text-align: center;margin-top: 100px;">
+    <form method="post" action="/signup/"> 
+        {% csrf_token %}
+    <input type="text" placeholder="Name" name="name" /><br><br>
+    <input type="text" placeholder="Contact" name="contact" /><br><br>
+    <input type="email" placeholder="Email" name="email" /><br><br>
+    <input type="password" placeholder="Password" name="password" /><br><br>
+    <input type="date" placeholder="Date Of Birth" name="dob" /><br><br>
+    <button type="submit">Signup</button>
+    </form>
+    {% for i in messages %}
+    <strong>MESSAGE: </strong> {{i}}
+    {% endfor %}
+</body>
+</html>
